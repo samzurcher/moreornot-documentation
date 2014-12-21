@@ -1,4 +1,3 @@
-moreornot-documentation
-=======================
+### Source for the documentation of the project moreornot
 
-Documentation for the Project moreornot.com
+The source of the documentation available at moreornot.com

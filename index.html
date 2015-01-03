@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation of the project moreornot.com (2013-2014)</title>
+<link rel="stylesheet" href="css/moreornot.css">
+<link rel="stylesheet" href="css/application.css">
+<link href="http://fonts.googleapis.com/css?family=Oregano" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+
+</head>
+<body>
+	<div id="content">
+
+		<div class="page-header">
+			<div class="navbar-brand">More or Not?</div>
+			<h2>
+				Documentation of the project MoreOrNot <small>2013-2014</small>
+			</h2>
+		</div>
+		<ul id="chapters" class="nav nav-tabs">
+			<li><a href="#overview">Overview</a></li>
+			<li><a href="#application">Application</a></li>
+			<li><a href="#implementation">Implementation</a></li>
+			<li><a href="#people_references">People & References</a></li>
+		</ul>
+		<div id="content" class="tab-content">
+			<div class="tab-pane" id="overview">
+				<p>The project MoreOrNot was inspired by Yao's
+				<a href="http://en.wikipedia.org/wiki/Yao%27s_Millionaires%27_Problem">Millionaires' Problem</a>
+				in which two millionaires want to know who has more money without revealing their actual wealth. 
+				MoreOrNot doesn't employ the classical protocol but rather acts as a trusted intermediary that allows 
+				the comparison of arbitrary comparable values between Facebook friends.
+				This results in an offline comparison in which not both friends have to be online at the same time.
+				</p>
+				<p>Started in 2013 as a side and playground project to gain experience with the 
+				<a href="https://www.playframework.com/">Play 2 Framework</a> and 
+				<a href="https://developers.facebook.com/">Facebook Integration</a>, it developed
+				into a more serious project with some ambition for a commercial push. 
+				The commercial ambition was based on the fact that if you can get two friends to compare something that they
+				are passionate about, there is a chance that at least one of them might be inclined to act on the comparison 
+				result. Pairing this inclination with the matching affiliate offer or advertisement should result in a
+				healthy conversion.
+				</p>
+				<p>
+				With the Snowden revelations and various other privacy related scandals though, 
+				it soon was obvious that very few people would be willing to share their 
+				sensitive information on an unknown platform. As a result, the project was put on hold.
+				</p>
+			</div>
+			<div class="tab-pane" id="application">
+				<h3>Asking and Replying to Questions</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>1. Asking a Question</h4>
+							<a rel="user" href="images/questions/01-ask-your-friends.png" title="1. Asking a question">
+								<img alt="" src="images/questions/01-ask-your-friends.png"/>
+							</a>
+							<p>
+								A user coming to MoreOrNot is shown a page on which she can ask a question and at the same time 
+								provide her answer.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>2. Login</h4>
+							<a rel="user" href="images/questions/02-login.png" title="2. Login">
+								<img alt="" src="images/questions/02-login.png"/>
+							</a>
+							<p>
+								The user is next asked to log in. If she is using MoreOrNot for the first time, Facebook will
+								ask her to allow MoreOrNot to view certain information. Otherwise, the login will proceed without further actions. 
+								In case the user is already logged in, this step is skipped.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>3. Invite Friends</h4>
+							<a rel="user" href="images/questions/03a-invite-friends.png" title="3. Invite Friends">
+								<img alt="" src="images/questions/03a-invite-friends.png"/>
+							</a>
+							<p>
+								The user is next asked to invited Facebook friends. 
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>4. Select Friends</h4>
+							<a rel="user" href="images/questions/03b-invite-fiends-facebook-dialog.png" title="4. Select Friends">
+								<img alt="" src="images/questions/03b-invite-fiends-facebook-dialog.png"/>
+							</a>
+							<p>
+								From a list of Facebook friends, the user can select the ones that he wants to invite for the current challenge.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>5. Next Steps</h4>
+							<a rel="user" href="images/questions/05-next-steps.png" title="5. Next Steps">
+								<img alt="" src="images/questions/05-next-steps.png"/>
+							</a>
+							<p>
+								After having invited the friends, the user is informed about the next steps.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>6. Reply</h4>
+							<a rel="user" href="images/questions/06-reply.png" title="6. Reply">
+								<img alt="" src="images/questions/06-reply.png"/>
+							</a>
+							<p>
+								The invited friend receives a Facebook notification. When clicking on the link or when otherwise 
+								navigating to MoreOrNot, the invited friend is asked to reply to the challenge. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>7. Result</h4>
+							<a rel="user" href="images/questions/07-result.png" title="7. Result">
+								<img alt="" src="images/questions/07-result.png"/>
+							</a>
+							<p>
+								After the challenge has been replied to, the invited friend is shown the result. The initiating user receives an email
+								informing her that the result of the challenge is awaiting her.
+							</p>
+						</div>
+					</div>
+				</div>
+				<h3>Challenges Overview</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>1. Overview</h4>
+							<a rel="overview" href="images/overview/01-overview.png" title="1. Overview">
+								<img alt="" src="images/overview/01-overview.png"/>
+							</a>
+							<p>
+								The user has an overview of all the challenges that she has participated in. For each challenge,
+								she sees how many times she had more and how many times less. Further, it is visible whether there are outstanding 
+								invitations.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>2. Details</h4>
+							<a rel="overview" href="images/overview/02-details.png" title="2. Details">
+								<img alt="" src="images/overview/02-details.png"/>
+							</a>
+							<p>
+								In the detail view, the user is shown with who she has played a challenge. 
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				
+				<h3>Administration</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>1. Edit Advertisement Template</h4>
+							<a rel="admin" href="images/admin/01-advertisment-template-edit.png" title="1. Edit Advertisement Template">
+								<img alt="" src="images/admin/01-advertisment-template-edit.png"/>
+							</a>
+							<p>
+								The admin user can create advertisement templates. An advertisement template contains a HTML snippet representing the 
+								advertisement to be displayed and configuration for when to show the advertisement. In the shown example, the advertisement
+								should be shown in case the user has entered a value that is higher than 5.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>2. View Advertisement Templates</h4>
+							<a rel="admin" href="images/admin/02-advertisment-template-view.png" title="2. View Advertisement Templates">
+								<img alt="" src="images/admin/02-advertisment-template-view.png"/>
+							</a>
+							<p>
+								In the view mode, the advertisement is displayed including all additional configuration.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>3. Edit Advertisement</h4>
+							<a rel="admin" href="images/admin/03-advertisement-edit.png" title="3. Edit Advertisement">
+								<img alt="" src="images/admin/03-advertisement-edit.png"/>
+							</a>
+							<p>
+								The admin user can pair an advertisement template with a challenge so that the advertisement represented by the 
+								advertisement template is shown next to the challenge in case the conditions are fulfilled.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>4. View Advertisements</h4>
+							<a rel="admin" href="images/admin/04-advertisement-view.png" title="4. View Advertisements">
+								<img alt="" src="images/admin/04-advertisement-view.png"/>
+							</a>
+							<p>
+								In the view mode, the challenges and the advertisement templates are shown next to each other.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>5. Edit SEO Paths</h4>
+							<a rel="admin" href="images/admin/05-seo-paths-edit.png" title="5. Edit SEO Paths">
+								<img alt="" src="images/admin/05-seo-paths-edit.png"/>
+							</a>
+							<p>
+								The admin user can assign an SEO path to a challenge. This path can then be used to link to a challenge.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="thumbnail">
+							<h4>6. View SEO Paths</h4>
+							<a rel="admin" href="images/admin/06-seo-paths-view.png" title="6. View SEO Paths">
+								<img alt="" src="images/admin/06-seo-paths-view.png"/>
+							</a>
+							<p>
+								In the view mode, the challenges and the SEO paths are shown next to each other.
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="tab-pane" id="implementation">
+				<h3>Implementation</h3>
+				<ul>
+					<li>Play 2 Framework in the Java flavor.</li>
+					<li>Hibernate JPA implementation for access to PostgreSQL.</li>
+					<li>Authentication with <a target="_blank" href="http://joscha.github.io/play-authenticate/">Play Authenticate</a>.</li>
+					<li>Authorization with <a target="_blank" href="https://github.com/schaloner/deadbolt-2">Deadbolt</a>.</li>
+					<li>Interaction with Facebook with <a target="_blank" href="http://facebook4j.org/en/index.html">Facebook4J</a>.</li>
+					<li>Styling with Twitter Bootstrap and a custom theme.</li>
+					<li>CSS written in LESS.</li>
+					
+				</ul>			
+			</div>
+			<div class="tab-pane" id="people_references">
+				<h3>People</h3>
+				<dl class="dl-horizontal">
+				  <dt>Idea / Concept </dt>
+				  <dd>Tshering Deki Zurcher, Sam Zurcher</dd>
+				  <dt>Implementation / Design </dt>
+				  <dd>Sam Zurcher</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/application.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+</body>
+</html>

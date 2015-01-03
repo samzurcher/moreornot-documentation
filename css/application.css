@@ -1,0 +1,80 @@
+body {
+	padding-top: 0px;
+	background-color: #D3E8AD;
+}
+
+h3, h4 {
+	color: #84b231;
+}
+
+#content {
+	width: 800px;
+	margin: auto;
+}
+.page-header, .page-header small, .nav-tabs a {
+	color: #84b231;
+}
+
+.page-header .navbar-brand {
+	color: #84b231;
+	font-weight: bold;
+	font-family: 'Oregano', sans-serif;
+	font-size: 300%;
+	margin-right: 40px;
+	display: block;
+	float: none;
+}
+.tab-content {
+	background-color:#ffffff;
+	padding: 3em;
+	margin-bottom: 5em;
+}
+
+.tab-content img {
+	margin: 3em auto;
+}
+
+.tab-content .thumbnail h4 {
+	text-align: center;
+}
+
+.tab-content .thumbnail img {
+	margin: 0em;
+}
+.tab-content .thumbnail {
+	background-color: #ffffff;
+}
+
+.tab-content .included-content {
+	width: 640px; 
+    height: 390px;
+    margin: 3em auto;
+}
+.tab-content p, blockquote {
+	font-size: 15px;
+}
+blockquote {
+	border-left: 0px solid;
+}
+
+#chapters {
+	margin-bottom: 0px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:visited {
+	background-color:#ffffff;
+	font-weight: bold;
+	color: #668A26;
+}
+
+.caption {
+	text-align: center;
+}
+
+.dl-horizontal dt {
+	width: 20em;
+}
+
+.dl-horizontal dd {
+	margin-left: 21em;
+}
